@@ -1,0 +1,218 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% block content %}
+<section class = "s1">
+    <div class = "main-container">
+        <div class = "greeting-wrapper">
+            <div class = "main-text1">
+                <h1>Hi,</h1>
+            </div>
+            <div class = "main-text2">
+                <h1>I'm Shahin Mammadov</h1>
+            </div>
+        </div>
+
+
+        <div class = "intro-wrapper">
+            <div class = "nav-wrapper">
+                <div class = "dots-wrapper">
+                    <div id = "dot-1"class = "browser-dot"></div>
+                    <div id = "dot-2"class = "browser-dot"></div>
+                    <div id = "dot-3"class = "browser-dot"></div>
+                </div>
+
+                <ul id = "navigation">
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class = "left-column">
+                <img id = "profile-pic"src="{% static 'images/shahincv2.jpg'%}" alt="">
+                <h5 style="text-align: center;line-height: 0;">Choose Color</h5>
+            
+                <div id = "theme-options-wrapper">
+                    <div data-mode="light" id = "light-mode"class = "theme-dot"></div>
+                    <div data-mode="blue" id = "blue-mode"class = "theme-dot"></div>
+                    <div data-mode="green" id = "green-mode"class = "theme-dot"></div>
+                    <div data-mode="purple" id = "purple-mode"class = "theme-dot"></div>
+                </div>
+
+                <p id = "settings-note">P.S: Theme settings will be saved for <br> your next visit</p>
+            </div>
+
+            <!-- <div class = "right-column">
+                <div id = "preview-shadow">
+                    <div id = "preview">
+                        <div id = "corner-tl"class = "corner"></div>
+                        <div id = "corner-tr"class = "corner"></div>
+                        <h3>What do I do?</h3>
+                            <p>Currently on my last year studying Computer Science in Jacobs University Bremen!</p>
+                        <div id = "corner-br"class = "corner"></div>
+                        <div id = "corner-bl"class = "corner"></div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+<section class = "s2">
+    <div class = "main-container">
+        <div class="about-wrapper">
+            <div class="about-me">
+                <h4>More about me</h4>
+
+                <p>Current 3rd year student studying Computer Science at Jacobs University Bremen. Have 3 
+                    years of experience in C and C++, 2 years in Python, including object oriented programming. Practiced my coding 
+                    on C# by creating few simple unity games. Also a beginner in HTML and CSS .</p>
+
+                <p>Very eager to learn more and more everyday.</p>
+
+
+                <hr>
+
+                <h4>Top Skills</h4>
+            
+
+                    
+                <div id="skills">
+                    <ul>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Python</li>
+                        <li>C#</li>
+                    </ul>
+
+                    <ul>
+                        <li>Unreal Engine</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+
+                </div> 
+                <!--
+                <ul class="skill-bars">
+                    <li>
+                        <div class="progress percent50"><span>50%</span></div>
+                        <strong>HTML5</strong>
+                    </li>
+                    <li>
+                        <div class="progress percent50"><span>50%</span></div>
+                        <strong>CSS3</strong>
+                    </li>
+                    <li>
+                        <div class="progress percent75"><span>75%</span></div>
+                        <strong>C++</strong>
+                    </li>
+                    <li>
+                        <div class="progress percent75"><span>75%</span></div>
+                        <strong>C</strong>
+                    </li>
+                    <li>
+ 
+                        <div class="progress percent70"><span>70%</span></div>
+                        <strong>Python</strong>
+                    </li>
+
+                    <li>
+ 
+                        <div class="progress percent40"><span>40%</span></div>
+                        <strong>UE</strong>
+                    </li>
+       
+                 </ul>-->
+
+            </div>
+            
+            <div class = "social-links">
+                <img id = "social_img" src="{% static 'images/linkedin.PNG' %}" alt="">
+                <h3>Find me on <a target = "_blank" href="https://www.linkedin.com/in/shahin-mammadov-562797171/">LinkedIn</a></h3>
+                <h5 style = "margin-bottom: 15px;">Download my CV</h5>
+                <div class = "downloadbt">
+                    <h5 class = "herelnk"><a href="">HERE</a></h5>
+                </div>
+             
+            </div>
+    </div>
+</section>
+
+<section class = "s1">
+    <div class = "main-container">
+        <div class = "post-wrapper">
+            <h3 style= "margin-top: 0; padding-top: 28px; text-align: center;">Some of my projects</h3>
+            <div class = "multi-post">
+            <div>
+                <div class = "post">
+                    <img class = "thumbnail" src="{% static 'images/coming-soon.jpg'%}" alt="">
+                    <div class = "post-preview">
+                        <h6 class = "post-title">Post Title</h6>
+                        <p class = "post-intro"> This is some sentence</p>
+                        <p> <a href="/blog">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class = "post">
+                    <img class = "thumbnail" src="{% static 'images/coming-soon.jpg'%}" alt="">
+                    <div class = "post-preview">
+                        <h6 class = "post-title">Post Title</h6>
+                        <p class = "post-intro"> This is some sentence</p>
+                        <p> <a href="#">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class = "post">
+                    <img class = "thumbnail" src="{% static 'images/coming-soon.jpg'%}" alt="">
+                    <div class = "post-preview">
+                        <h6 class = "post-title">Post Title</h6>
+                        <p class = "post-intro"> This is some sentence</p>
+                        <p> <a href="#">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class = "s3">
+    <div class = "main-container">
+        <a name = "contact"></a>
+        <h3 style = "text-align: center;">Get in Touch</h3>
+
+        <form id="contact-form">
+            <label>Name</label>
+            <input class = "input-field" type="text" name="name">
+
+            <label>Subject</label>
+            <input class = "input-field" type="text" name="subject">
+
+            <label>Email</label>
+            <input class = "input-field" type="text" name="email">
+            
+            <label>Message</label>
+            <textarea class = "input-field" type="text" name="message"></textarea>
+
+            <input id = "submit-btn" type="submit" value = "Send">
+
+        </form>
+    </div>
+</section>
+
+<section id="footer">
+    <div class="footer container">
+        <div class="brand">Shahin Mammadov</div>
+        <div class="social-icon">
+            <div class="social-item">
+                <a href=""><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>
+             
+            </div>
+            <div class="social-item">
+                <a href=""><img src="https://img.icons8.com/fluent/48/000000/apple-mail.png"/></a>
+            </div>
+        </div>
+        <p style = "font-size: 10px;">Updates to the site will be in blog section soon. (V1.2)</p>
+    </div>
+
+{% endblock content%}

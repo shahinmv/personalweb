@@ -1,0 +1,82 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% block content %}
+<section class = "sp1"> 
+    <div class = "main-container">
+    <div style = "height : 30px;">
+    </div>
+        <div class = "intro-wrapper1">
+            <div class = "nav-wrapper">
+                <div class = "dots-wrapper">
+                    <div id = "dot-1"class = "browser-dot"></div>
+                    <div id = "dot-2"class = "browser-dot"></div>
+                    <div id = "dot-3"class = "browser-dot"></div>
+                </div>
+
+                <ul id = "navigation">
+                    <li><a href="{% url 'website-home' %}">Main Site</a></li>
+                </ul>
+            </div>
+            <div class = "left-column ">
+                {% for post in posts%}
+                <!--  <div class = "main-container">
+                    <h1> {{post.title}} </h1>
+                    <p>By {{post.author}} on {{post.date_posted }} </p>
+                    <p> {{post.content}} </p>
+                </div> -->
+                <article class="media-body content-section post-wrapper1">
+                    <div class="media">
+                        <div class="article-metadata">
+                            <a class="mr-2" href="#">{{ post.author }}</a>
+                            <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+                        </div>
+                        <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+                        {% comment %} <p style = "color: black;" class="article-content">{{ post.content }}</p>
+                        <img class = "thumbnail" src=" {% static '/images/coming-soon.jpg'%} " alt=""> {% endcomment %}
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+            <div class = "right-column1">
+                <div class = "options-body">
+                    <div class = "options">
+                        <h4 style = "color: white;">search</h4>
+                        <h4 style = "color: white;">search</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+     </div>
+     
+</section>
+
+<section id="footer">
+    <div class="footer container">
+        <div class="brand">Shahin Mammadov</div>
+        <div class="social-icon">
+            <div class="social-item">
+                <a href=""><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>
+             
+            </div>
+            <div class="social-item">
+                <a href=""><img src="https://img.icons8.com/fluent/48/000000/apple-mail.png"/></a>
+            </div>
+        </div>
+        <p style = "font-size: 10px;">Updates to the site will be in blog section soon. (V1.2)</p>
+    </div>
+    
+    <script type = "text/javascript">
+        let static = "{% static 'cssjs' %}"
+    </script>
+
+    <script type="text/javascript" src = "{% static 'cssjs/script.js'%}"></script>
+</section>
+
+<script type = "text/javascript">
+    let static = "{% static 'cssjs' %}"
+</script>
+
+<script type="text/javascript" src = "{% static 'cssjs/script.js'%}"></script>
+
+{%endblock content%}
